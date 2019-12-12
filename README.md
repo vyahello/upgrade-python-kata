@@ -12,7 +12,7 @@ You can use it as a troubleshooting case if you stuck with some exercises to acc
 
 Please run following script from the root directory of a project:
 ```bash
-➜  ~ python kata/<level-rank>/<task-name>.py
+➜  python kata/<level-rank>/<task-name>.py
 ```
 
 ## Meta
