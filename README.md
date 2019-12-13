@@ -1,3 +1,5 @@
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
+
 # Upgrade your python kata
 
 This project is aimed to provide solutions for [codewars](https://www.codewars.com) tasks.
