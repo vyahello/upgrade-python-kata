@@ -2,6 +2,15 @@
 Your task is to convert number to reversed array of digits.
 
 51037 -> [7, 3, 0, 1, 5]
+
+-----------------------------------
+For doctests run following command:
+python -m xdoctest -v digitalize.py
+or
+python3 -m xdoctest -v digitalize.py
+
+For manual testing run:
+python digitalize.py
 """
 
 from typing import List

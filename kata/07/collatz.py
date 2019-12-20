@@ -8,11 +8,24 @@ For example, if n = 20, the resulting sequence will be:
 
 Write a program that will output the length of the Collatz Conjecture for any given n.
 In the example above, the output would be 8
+
+-----------------------------------
+For doctests run following command:
+python -m xdoctest -v collatz.py
+or
+python3 -m xdoctest -v collatz.py
+
+For manual testing run:
+python collatz.py
 """
 
 
 def collatz_conjecture_length(number: int) -> int:
-    """Returns length of collatz conjecture sequence."""
+    """Returns length of collatz conjecture sequence.
+
+    Examples:
+        >>> assert collatz_conjecture_length(20) == 8
+    """
     counter: int = 1
     while number > 1:
         counter += 1

@@ -8,7 +8,5 @@ before_install:
   - pip install -r requirements.txt -U
 script:
   - python3 -m xdoctest kata
-after_success:
-  - codecov
 notifications:
   email: false
