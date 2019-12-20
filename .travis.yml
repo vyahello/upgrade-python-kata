@@ -7,6 +7,7 @@ before_install:
   - pip install pip -U
   - pip install -r requirements.txt -U
 script:
+  - black --check kata
   - python3 -m xdoctest kata
 notifications:
   email: false

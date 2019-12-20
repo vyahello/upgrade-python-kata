@@ -31,4 +31,4 @@ def split_the_bill(group: Dict[str, float]) -> Dict[str, float]:
 
 if __name__ == "__main__":
     print(split_the_bill({"A": 20, "B": 15, "C": 10}))  # -> {'A': 5, 'B': 0, 'C': -5}
-    print(split_the_bill({'A': -17.200000000000003, 'B': -32.2, 'C': -47.2, 'D': 95.8, 'E': 0.7999999999999972}))
+    print(split_the_bill({"A": -17.200000000000003, "B": -32.2, "C": -47.2, "D": 95.8, "E": 0.7999999999999972}))
