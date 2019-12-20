@@ -8,11 +8,16 @@ from typing import List
 
 
 def digitalize(number: int) -> List[int]:
-    "Convert number to reversed array of digits."
+    """Convert number to reversed array of digits.
+
+    Examples:
+        >>> assert digitalize(4567) == [7, 6, 5, 4]
+        >>>
+        >>> assert digitalize(4321) == [1, 2, 3, 4]
+    """
     return list(map(int, str(number)))[::-1]
 
 
 if __name__ == "__main__":
     print(digitalize(4567))  # -> [7, 6, 5, 4]
     print(digitalize(4321))  # -> [1, 2, 3, 4]
-
