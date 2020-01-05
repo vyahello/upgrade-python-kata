@@ -8,9 +8,8 @@ same place in the number in order to find the smallest number you can get.
 1) the smallest number you got
 2) the index i of the digit d you took, i as small as possible
 3) the index j (as small as possible) where you insert this digit d to have the smallest number.
-Example:
 
-smallest(261235) --> [126235, 2, 0] or (126235, 2, 0) or "126235, 2, 0"
+# smallest(261235) --> [126235, 2, 0] or (126235, 2, 0) or "126235, 2, 0"
 """
 from typing import List
 

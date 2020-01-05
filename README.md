@@ -3,9 +3,11 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.org/vyahello/upgrade-python-kata.svg?branch=master)](https://travis-ci.org/vyahello/upgrade-python-kata)
 
+![My Codewarrior Profile Badge](https://www.codewars.com/users/vyahello/badges/small)
+
 # Upgrade your python kata
 
-This project is aimed to provide solutions for [codewars](https://www.codewars.com) tasks.
+This project is aimed to provide solutions for [codewars](https://www.codewars.com) tasks followed by [kata approach](https://en.wikipedia.org/wiki/Kata_(programming)).
 You can use it as a troubleshooting case if you stuck with some exercises to accomplish.
 
 ## Tools
