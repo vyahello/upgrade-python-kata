@@ -3,6 +3,15 @@ Sort the given strings in alphabetical order, case insensitive. For example:
 
 ["Hello", "there", "I'm", "fine"]  -->  ["fine", "Hello", "I'm", "there"]
 ["C", "d", "a", "B"])              -->  ["a", "B", "C", "d"]
+
+-----------------------------------
+For doctests run following command:
+python -m xdoctest -v sort_array.py
+or
+python3 -m xdoctest -v sort_array.py
+
+For manual testing run:
+python sort_array.py
 """
 from typing import List
 
