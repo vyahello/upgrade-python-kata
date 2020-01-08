@@ -3,12 +3,11 @@ Create a function, that accepts an arbitrary number of arrays and returns a sing
 alternately appending elements from the passed in arguments. If one of them is shorter than the others,
 the result should be padded with empty elements.
 
-Examples:
 
-#interleave([1, 2, 3], ["c", "d", "e"]) == [1, "c", 2, "d", 3, "e"]
-#interleave([1, 2, 3], [4, 5]) == [1, 4, 2, 5, 3, None]
-#interleave([1, 2, 3], [4, 5, 6], [7, 8, 9]) == [1, 4, 7, 2, 5, 8, 3, 6, 9]
-#interleave([]) == []
+# interleave([1, 2, 3], ["c", "d", "e"]) == [1, "c", 2, "d", 3, "e"]
+# interleave([1, 2, 3], [4, 5]) == [1, 4, 2, 5, 3, None]
+# interleave([1, 2, 3], [4, 5, 6], [7, 8, 9]) == [1, 4, 7, 2, 5, 8, 3, 6, 9]
+# interleave([]) == []
 """
 from typing import List, Any
 from itertools import zip_longest, chain
