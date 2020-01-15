@@ -22,7 +22,7 @@ def padovan(number: int) -> int:
     result = [0, 1, 1]
     for c in range(2, number):
         result.append(result[0] + result[1])
-        del(result[0])
+        del result[0]
     return result[0] + result[1]
 
 
