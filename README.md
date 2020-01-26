@@ -3,7 +3,7 @@
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE.md)
 [![Build Status](https://travis-ci.org/vyahello/upgrade-python-kata.svg?branch=master)](https://travis-ci.org/vyahello/upgrade-python-kata)
 
-![My Codewarrior Profile Badge](https://www.codewars.com/users/vyahello/badges/small)
+![My Codewarrior Profile Badge](https://www.codewars.com/users/vyahello/badges/large)
 
 # Upgrade your python kata
 
