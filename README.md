@@ -5,6 +5,8 @@
 
 ![My Codewarrior Profile Badge](https://www.codewars.com/users/vyahello/badges/large)
 
+Please check [Codewars kata solved](https://www.youtube.com/watch?v=xmTkWhhHuXw&list=PLJfbpeHQTnRcJfiT4LmxF9t5dIclEh5V2) **YouTube** playlist for additional reference
+
 # Upgrade your python kata
 
 This project is aimed to provide solutions for [codewars](https://www.codewars.com) tasks followed by [kata approach](https://en.wikipedia.org/wiki/Kata_(programming)).
