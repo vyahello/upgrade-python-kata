@@ -43,5 +43,20 @@ def product_fibonacci(product: int) -> List[Any]:
     return [fibonacci_one, fibonacci_two, False]
 
 
+def product_fibonacci_pythonic(product: int) -> List[Any]:
+    """Produce fibonacci sequence mapper (pythonic way)
+
+    Returns: a list of fibonacci mapping
+
+    Examples:
+        >>> assert product_fibonacci_pythonic(800) == [34, 55, False]
+    """
+    counter, handler = 0, 1
+    while product > counter * handler:
+        counter, handler = handler, counter + handler
+    return [counter, handler, product == counter * handler]
+
+
 if __name__ == "__main__":
     print(product_fibonacci(800) == [34, 55, False])
+    print(product_fibonacci_pythonic(800) == [34, 55, False])
