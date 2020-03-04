@@ -21,5 +21,18 @@ def two_oldest_ages(ages: List[int]) -> List[int]:
     return sorted(ages)[len(ages) - 2 : len(ages)]
 
 
+def two_oldest_ages_pythonic(ages: List[int]) -> List[int]:
+    """Returns a list of highest ages from given list of ages.
+
+    Args:
+        ages (List[int]): given list of ages
+
+    Examples:
+        >>> assert two_oldest_ages_pythonic([1, 3, 10, 0]) == [3, 10]
+    """
+    return sorted(ages)[-2:]
+
+
 if __name__ == "__main__":
     print(two_oldest_ages([1, 3, 10, 0]))
+    print(two_oldest_ages_pythonic([1, 3, 10, 0]))
