@@ -8,7 +8,7 @@ Haskell and Result<Vec<u32>, String> in Rust).
 
 
 def divisors(integer: int) -> list:
-    """Returns all divisors
+    """Returns all divisors.
 
     Args:
         integer (int): a number
@@ -22,5 +22,18 @@ def divisors(integer: int) -> list:
     return result
 
 
+def divisors_pythonic(integer: int) -> list:
+    """Returns all divisors (pythonic).
+
+    Args:
+        integer (int): a number
+
+    Examples:
+        >>> assert divisors_pythonic(12) == [2, 3, 4, 6]
+    """
+    return [divisor for divisor in range(2, integer - 1) if not integer % divisor] or f"{integer} is prime"
+
+
 if __name__ == "__main__":
     print(divisors(12))
+    print(divisors_pythonic(12))
