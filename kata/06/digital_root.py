@@ -16,6 +16,20 @@ def digital_root(number: int) -> int:
     Examples:
         >>> assert digital_root(166) == 4
     """
+    while number > 10:
+        number = sum(map(int, str(number)))
+    return number
+
+
+def digital_root_pythonic(number: int) -> int:
+    """Sums all numbers in given number (pythonic).
+
+    Args:
+        number (int): given number
+
+    Examples:
+        >>> assert digital_root_pythonic(166) == 4
+    """
     if len(str(number)) > 1:
         return digital_root(sum(map(int, str(number))))
     return number
