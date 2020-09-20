@@ -22,14 +22,14 @@ You can use it as a troubleshooting case if you stuck with some exercises to acc
 
 Please run following script from the root directory of a project:
 ```bash
-➜ python kata/<level-rank>/<task-name>.py
+python kata/<level-rank>/<task-name>.py
 ```
 
 ## Development notes
 
 To be able to run unittests please execute command below:
 ```bash
-➜ python -m xdoctest kata
+python -m xdoctest kata
 ```
 
 ### Meta
@@ -39,7 +39,7 @@ Author – Volodymyr Yahello vyahello@gmail.com
 Distributed under the `MIT` license. See [LICENSE](LICENSE.md) for more information.
 
 You can reach out me at:
-* [https://github.com/vyahello](https://github.com/vyahello)
+* [https://twitter.com/vyahello](https://twitter.com/vyahello)
 * [https://www.linkedin.com/in/volodymyr-yahello-821746127](https://www.linkedin.com/in/volodymyr-yahello-821746127)
 
 ### Contributing
