@@ -19,7 +19,9 @@ def count_sequence(lines: List[str], start_from: int = 1) -> List[str]:
         >>> assert not count_sequence([])
         >>> assert count_sequence(["a", "b", "c"]) == ["1: a", "2: b", "3: c"]
     """
-    return [f"{index}: {value}" for index, value in enumerate(lines, start_from)]
+    return [
+        f"{index}: {value}" for index, value in enumerate(lines, start_from)
+    ]
 
 
 if __name__ == "__main__":

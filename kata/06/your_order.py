@@ -32,7 +32,15 @@ def order(sentence: str) -> str:
     return " ".join(
         map(
             lambda item: item[1],
-            sorted(map(lambda word: ([index for index in word if index.isdigit()][0], word), sentence.split())),
+            sorted(
+                map(
+                    lambda word: (
+                        [index for index in word if index.isdigit()][0],
+                        word,
+                    ),
+                    sentence.split(),
+                )
+            ),
         )
     )
 
@@ -44,7 +52,9 @@ def order_pythonic(sentence: str) -> str:
         >>> assert order_pythonic("") == ""
         >>> assert order_pythonic("is2 Thi1s T4est 3a") == "Thi1s is2 3a T4est"
     """
-    return " ".join(sorted(sentence.split(), key=lambda x: "".join(filter(str.isdigit, x))))
+    return " ".join(
+        sorted(sentence.split(), key=lambda x: "".join(filter(str.isdigit, x)))
+    )
 
 
 def order_pythonic_min(sentence: str) -> str:

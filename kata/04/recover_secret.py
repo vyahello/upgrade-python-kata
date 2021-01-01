@@ -85,7 +85,11 @@ def recover_secret_v2(triplets: ListStringList) -> str:
             if first > second or second > third:
                 counter += 1
                 first, second, third = sorted((first, second, third))
-                unique[first], unique[second], unique[third] = row[0], row[1], row[2]
+                unique[first], unique[second], unique[third] = (
+                    row[0],
+                    row[1],
+                    row[2],
+                )
         if not counter:
             return "".join(unique)
 

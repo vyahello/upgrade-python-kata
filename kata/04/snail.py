@@ -45,7 +45,11 @@ def snail_pythonic(arrays: List[List[int]]) -> List[int]:
         >>>
         >>> assert snail_pythonic([[1, 2, 3], [4, 5, 6], [7, 8, 9]]) == [1, 2, 3, 6, 9, 8, 7, 4, 5]
     """
-    return arrays[0] + snail_pythonic(list(map(list, zip(*arrays[1:])))[::-1]) if arrays else []
+    return (
+        arrays[0] + snail_pythonic(list(map(list, zip(*arrays[1:])))[::-1])
+        if arrays
+        else []
+    )
 
 
 def snail_pythonic_v2(arrays: List[List[int]]) -> List[int]:

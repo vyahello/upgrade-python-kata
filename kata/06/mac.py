@@ -21,7 +21,11 @@ def is_mac_48_address(address: str) -> bool:
         >>> assert is_mac_48_address("00-1B-63-84-45-E6") is True
         >>> assert is_mac_48_address("Z1-1B-63-84-45-E6") is False
     """
-    return bool(re.compile(r"[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}$").search(address))
+    return bool(
+        re.compile(
+            r"[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}-[0-9A-F]{2}$"
+        ).search(address)
+    )
 
 
 if __name__ == "__main__":

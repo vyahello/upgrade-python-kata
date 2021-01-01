@@ -16,7 +16,11 @@ def my_languages(results: dict) -> list:
         >>> assert my_languages({"Java": 10, "Ruby": 80, "Python": 65}) == ["Ruby", "Python"]
     """
     return [
-        language for language, score in sorted(results.items(), key=lambda pair: pair[1], reverse=True) if score > 59
+        language
+        for language, score in sorted(
+            results.items(), key=lambda pair: pair[1], reverse=True
+        )
+        if score > 59
     ]
 
 

@@ -56,7 +56,10 @@ def is_int_array_pythonic(array: List[Any]) -> bool:
         >>> assert is_int_array_pythonic([-11, -12, -13, -14])
         >>> assert is_int_array_pythonic([1.0, 2.0, 3.0])
     """
-    return isinstance(array, list) and all(isinstance(value, (int, float)) and value == int(value) for value in array)
+    return isinstance(array, list) and all(
+        isinstance(value, (int, float)) and value == int(value)
+        for value in array
+    )
 
 
 if __name__ == "__main__":

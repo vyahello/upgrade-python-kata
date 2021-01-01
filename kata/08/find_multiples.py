@@ -32,7 +32,9 @@ def find_multiples(integer: int, range_: int) -> List[int]:
         >>>
         >>> assert find_multiples(2, 6) == [2, 4, 6]
     """
-    return list(filter(lambda number: number % integer == 0, range(1, range_ + 1)))
+    return list(
+        filter(lambda number: number % integer == 0, range(1, range_ + 1))
+    )
 
 
 if __name__ == "__main__":

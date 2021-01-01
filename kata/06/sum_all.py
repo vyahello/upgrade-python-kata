@@ -11,7 +11,11 @@ def sum_multiples_of_3_and_5(number: int) -> int:
     Examples:
          >>> assert sum_multiples_of_3_and_5(10) == 23
     """
-    return sum(next_number for next_number in range(number) if next_number % 3 == 0 or next_number % 5 == 0)
+    return sum(
+        next_number
+        for next_number in range(number)
+        if next_number % 3 == 0 or next_number % 5 == 0
+    )
 
 
 if __name__ == "__main__":

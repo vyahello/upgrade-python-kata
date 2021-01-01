@@ -23,7 +23,9 @@ def duplicate_count(text: str) -> int:
         >>> assert duplicate_count("abcdea") == 1
         >>> assert duplicate_count("indivisibility") == 1
     """
-    return len(set(item for item in text.lower() if text.lower().count(item) > 1))
+    return len(
+        set(item for item in text.lower() if text.lower().count(item) > 1)
+    )
 
 
 if __name__ == "__main__":

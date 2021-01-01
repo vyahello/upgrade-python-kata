@@ -35,7 +35,11 @@ def calculate(number: int) -> Sequence[int]:
         first, second = calculate(number // 2)
         intermediate: int = first * (2 * second - first)
         quit_: int = second * second + first * first
-        return (intermediate, quit_) if not number % 2 else (quit_, intermediate + quit_)
+        return (
+            (intermediate, quit_)
+            if not number % 2
+            else (quit_, intermediate + quit_)
+        )
 
 
 def fib_efficient(number: int) -> int:

@@ -17,7 +17,10 @@ def extract_range(numbers: List[int]) -> Generator[Sequence[int], None, None]:
     counter: int = 0
     while counter < length:
         low: int = numbers[counter]
-        while counter < length - 1 and numbers[counter] + 1 == numbers[counter + 1]:
+        while (
+            counter < length - 1
+            and numbers[counter] + 1 == numbers[counter + 1]
+        ):
             counter += 1
         high: int = numbers[counter]
         if high - low >= 2:
@@ -36,7 +39,10 @@ def solution(numbers: List[int]) -> str:
     Examples:
         >>> assert solution([-3, -2, -1, 2, 10, 15, 16, 18, 19, 20]) == "-3--1,2,10,15,16,18-20"
     """
-    return ",".join(f"{group[0]}-{group[1]}" if len(group) == 2 else f"{group[0]}" for group in extract_range(numbers))
+    return ",".join(
+        f"{group[0]}-{group[1]}" if len(group) == 2 else f"{group[0]}"
+        for group in extract_range(numbers)
+    )
 
 
 if __name__ == "__main__":

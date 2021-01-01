@@ -34,7 +34,9 @@ def sorted_string(string: str) -> str:
         >>> assert sorted_string("") == ""
     """
     blocks = [f"-{item}" for item in string if list(string).count(item) > 1]
-    sorted_array = sorted(sorted(set(string), key=str.swapcase), key=str.isdigit)
+    sorted_array = sorted(
+        sorted(set(string), key=str.swapcase), key=str.isdigit
+    )
     if blocks:
         sorted_array.extend(blocks[1:])
     return "".join(sorted_array)

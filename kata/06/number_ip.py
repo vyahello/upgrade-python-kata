@@ -20,7 +20,11 @@ def number_and_ip_address(string: str) -> str:
         >>> assert number_and_ip_address("10.0.3.193") == "167773121"
         >>> assert number_and_ip_address("167969729") == "10.3.3.193"
     """
-    return str(int(ipaddress.IPv4Address(string))) if "." in string else str(ipaddress.IPv4Address(int(string)))
+    return (
+        str(int(ipaddress.IPv4Address(string)))
+        if "." in string
+        else str(ipaddress.IPv4Address(int(string)))
+    )
 
 
 if __name__ == "__main__":

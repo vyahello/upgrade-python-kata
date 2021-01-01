@@ -13,7 +13,9 @@ def break_camelcase(string: str) -> str:
     Examples:
         >>> assert break_camelcase("helloWorld") == "hello World"
     """
-    return "".join(map(lambda item: f" {item}" if item.isupper() else item, string))
+    return "".join(
+        map(lambda item: f" {item}" if item.isupper() else item, string)
+    )
 
 
 def break_camelcase_re(string: str) -> str:

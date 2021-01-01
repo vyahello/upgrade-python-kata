@@ -79,7 +79,10 @@ class ArrayPythonic(Array):
              >>> assert ArrayCommon([1, 2, 3, 4]).multiply_even() == 8
              >>> assert ArrayCommon([5, 6, 7, 8]).multiply_even() == 48
         """
-        return reduce(lambda first, second: first * second, (number for number in self._array if not number % 2))
+        return reduce(
+            lambda first, second: first * second,
+            (number for number in self._array if not number % 2),
+        )
 
 
 if __name__ == "__main__":

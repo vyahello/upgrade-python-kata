@@ -18,7 +18,12 @@ def convert_palindromes(numbers: List[int]) -> List[int]:
     Examples:
         >>> assert convert_palindromes([10, 11, 12, 121]) == [0, 1, 0, 1]
     """
-    return list(map(lambda number_as_str: int(number_as_str == number_as_str[::-1]), map(str, numbers)))
+    return list(
+        map(
+            lambda number_as_str: int(number_as_str == number_as_str[::-1]),
+            map(str, numbers),
+        )
+    )
 
 
 if __name__ == "__main__":

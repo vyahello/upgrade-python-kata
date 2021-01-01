@@ -43,8 +43,15 @@ def phone(string: str, number: str) -> str:
         return f"Error => Too many people: {number}"
     for sub in string.splitlines():  # type: str
         if number in sub:
-            name: str = re.search(r"<[ a-zA-z']+>", sub).group().lstrip("<").rstrip(">")
-            address: str = " ".join(filter(lambda item: item, re.split(f"{number}|{name}|[^A-Za-z0-9-.]", sub)))
+            name: str = (
+                re.search(r"<[ a-zA-z']+>", sub).group().lstrip("<").rstrip(">")
+            )
+            address: str = " ".join(
+                filter(
+                    lambda item: item,
+                    re.split(f"{number}|{name}|[^A-Za-z0-9-.]", sub),
+                )
+            )
             return f"Phone => {number}, Name => {name}, Address => {address}"
 
 

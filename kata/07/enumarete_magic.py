@@ -9,7 +9,7 @@ from typing import Sequence, Callable
 
 
 def one(sequence: Sequence[int], function: Callable[[int], bool]) -> bool:
-    """"Returns true for exactly one item in the sequence.
+    """ "Returns true for exactly one item in the sequence.
 
     Args:
         sequence (Sequence[int]): a sequence of numbers
@@ -23,8 +23,10 @@ def one(sequence: Sequence[int], function: Callable[[int], bool]) -> bool:
     return len(tuple(filter(function, sequence))) == 1
 
 
-def one_pythonic(sequence: Sequence[int], function: Callable[[int], bool]) -> bool:
-    """"Returns true for exactly one item in the sequence (pythonic).
+def one_pythonic(
+    sequence: Sequence[int], function: Callable[[int], bool]
+) -> bool:
+    """ "Returns true for exactly one item in the sequence (pythonic).
 
     Args:
         sequence (Sequence[int]): a sequence of numbers

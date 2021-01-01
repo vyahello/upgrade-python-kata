@@ -18,7 +18,9 @@ def only_balanced(count: int) -> list:
         >>> assert only_balanced(1) == ["()"]
     """
     balanced = list()
-    for item in set("".join(option) for option in iter(options(count * "()"))):  # type: str
+    for item in set(
+        "".join(option) for option in iter(options(count * "()"))
+    ):  # type: str
         counter: int = 0
         for inner in item:
             if inner == "(":

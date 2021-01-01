@@ -44,7 +44,11 @@ def find_mine_pythonic_alt(field: List) -> List[int]:
     Examples:
         >>> assert find_mine([[0, 0, 0], [0, 1, 0], [0, 0, 0]]) == [1, 1]
     """
-    return next([field.index(sub_field), sub_field.index(1)] for sub_field in field if 1 in sub_field)
+    return next(
+        [field.index(sub_field), sub_field.index(1)]
+        for sub_field in field
+        if 1 in sub_field
+    )
 
 
 if __name__ == "__main__":

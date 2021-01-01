@@ -16,7 +16,9 @@ def divisors(integer: int) -> list:
     Examples:
         >>> assert divisors(12) == [2, 3, 4, 6]
     """
-    result: list = [divisor for divisor in range(2, integer - 1) if not integer % divisor]
+    result: list = [
+        divisor for divisor in range(2, integer - 1) if not integer % divisor
+    ]
     if not result:
         return f"{integer} is prime"
     return result
@@ -31,7 +33,9 @@ def divisors_pythonic(integer: int) -> list:
     Examples:
         >>> assert divisors_pythonic(12) == [2, 3, 4, 6]
     """
-    return [divisor for divisor in range(2, integer - 1) if not integer % divisor] or f"{integer} is prime"
+    return [
+        divisor for divisor in range(2, integer - 1) if not integer % divisor
+    ] or f"{integer} is prime"
 
 
 if __name__ == "__main__":

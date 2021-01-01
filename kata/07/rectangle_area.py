@@ -19,7 +19,11 @@ def area(diagonal: int, side: int) -> Union[int, float, str]:
         >>> assert area(5, 4) == 12
         >>> assert area(10, 6) == 48
     """
-    return "Not a rectangle" if diagonal <= side else round(side * math.sqrt(diagonal ** 2 - side ** 2), 2)
+    return (
+        "Not a rectangle"
+        if diagonal <= side
+        else round(side * math.sqrt(diagonal ** 2 - side ** 2), 2)
+    )
 
 
 if __name__ == "__main__":

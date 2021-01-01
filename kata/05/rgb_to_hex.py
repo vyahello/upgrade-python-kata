@@ -30,7 +30,9 @@ def rgb_to_hex_pythonic(*args: int) -> str:
     Examples:
         >>> assert rgb_to_hex_pythonic(1, 2, 3) == "010203"
     """
-    return "".join(map(lambda color: "{:02X}".format(min(max(0, color), 255)), args))
+    return "".join(
+        map(lambda color: "{:02X}".format(min(max(0, color), 255)), args)
+    )
 
 
 if __name__ == "__main__":
