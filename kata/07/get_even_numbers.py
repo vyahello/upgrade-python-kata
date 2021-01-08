@@ -12,7 +12,10 @@ def get_even_numbers(array: list) -> list:
     """Returns the row sums.
 
     Args:
-        number (int): input number to evaluate
+        array (list): input array of numbers.
+
+    Returns:
+        array (list): sorted array of numbers.
 
     Examples:
         >>> assert get_even_numbers([1, 2, 3, 4, 5, 6]) == [2, 4, 6]
