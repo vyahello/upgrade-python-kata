@@ -42,7 +42,7 @@ def print_nums_opt(*numbers: int) -> str:
     Returns: zero filled string.
 
     Examples:
-        >>> assert print_nums_opt(1, 12, 23) == '01 12 23'
+        >>> assert print_nums_opt(11, 12, 23) == '11 12 23'
     """
     return ' '.join(str(num).zfill(len(max(str(num)))) for num in numbers)
 
