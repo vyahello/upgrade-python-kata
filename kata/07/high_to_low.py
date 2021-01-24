@@ -22,7 +22,7 @@ def high_and_low(numbers: str) -> str:
         >>> assert high_and_low('1 2 3 4') == '1 4'
 
     """
-    return f'{max(map(int, numbers.split()))} {min(map(int, numbers.split()))}'
+    return f'{min(map(int, numbers.split()))} {max(map(int, numbers.split()))}'
 
 
 if __name__ == '__main__':
