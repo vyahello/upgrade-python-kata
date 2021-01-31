@@ -44,4 +44,3 @@ def high_and_low_classic(numbers: str) -> str:
 if __name__ == '__main__':
     print(high_and_low('1 2 3 4'))
     print(high_and_low_classic('1 2 3 4'))
-
