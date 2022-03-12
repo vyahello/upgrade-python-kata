@@ -94,6 +94,26 @@ def parentheses_status_eliminate(string: str) -> str:
     return "Unbalanced"
 
 
+def parentheses_status_eliminate_recursion(string: str) -> str:
+    """Check is expression string has balanced parentheses (using stack elimination via resursion).
+
+    In every iteration, the innermost brackets get eliminated (replaced with empty string).
+    If we end up with an empty string, our initial one was balanced; otherwise, not.
+
+    Examples:
+        >>> assert parentheses_status_eliminate_recursion("{[]{()}}") == "Balanced"
+        >>> assert parentheses_status_eliminate_recursion("[{}{})(]") == "Unbalanced"
+    """
+    brackets = '()', '[]', '{}'
+    if any(br in string for br in brackets):
+        for br in brackets:  # type: str
+            string = string.replace(br, '')
+        if not string:
+            return 'Balanced'
+        return parentheses_status_eliminate_recursion(string)
+    return 'Unbalanced'
+
+
 if __name__ == "__main__":
     print(parentheses_status_stack("{[]{()}}"))  # -> "Balanced"
     print(parentheses_status_stack("[{}{})(]"))  # -> "Unbalanced"
@@ -103,3 +123,6 @@ if __name__ == "__main__":
 
     print(parentheses_status_eliminate("{[]{()}}"))  # -> "Balanced"
     print(parentheses_status_eliminate("[{}{})(]"))  # -> "Unbalanced"
+
+    print(parentheses_status_eliminate_recursion("{[]{()}}"))  # -> "Balanced"
+    print(parentheses_status_eliminate_recursion("[{}{})(]"))  # -> "Unbalanced"

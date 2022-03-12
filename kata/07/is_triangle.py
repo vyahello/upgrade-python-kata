@@ -20,7 +20,11 @@ def is_triangle(side_one: int, side_two: int, base: int) -> bool:
         >>> assert is_triangle(1, 2, 2)
         >>> assert is_triangle(3, 2, 2)
     """
-    return side_one + side_two > base and side_two + base > side_one and side_one + base > side_two
+    return (
+        side_one + side_two > base
+        and side_two + base > side_one
+        and side_one + base > side_two
+    )
 
 
 if __name__ == '__main__':
