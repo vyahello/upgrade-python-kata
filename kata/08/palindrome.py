@@ -32,6 +32,23 @@ def is_palindrome(string: str) -> bool:
     return string.lower() == string[::-1].lower()
 
 
+def is_palindrome_alg(string: str) -> bool:
+    """Checks is given string is palindrome (algorithmetic).
+
+    Examples:
+        >>> assert is_palindrome_alg("abccba")
+        >>>
+        >>> assert is_palindrome_alg("123321")
+        >>>
+        >>> assert not is_palindrome_alg("abccbX")
+    """
+    string = (abs(string) if isinstance(string, int) else string).lower()
+    for idx in range(len(string)):  # type: int
+        if string[idx] != string[-idx-1]:
+            return False
+    return True
+
+
 if __name__ == "__main__":
     print(is_palindrome("abccba"))
     print(is_palindrome("123321"))
