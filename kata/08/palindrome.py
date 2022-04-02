@@ -44,7 +44,7 @@ def is_palindrome_alg(string: str) -> bool:
     """
     string = (abs(string) if isinstance(string, int) else string).lower()
     for idx in range(len(string)):  # type: int
-        if string[idx] != string[-idx-1]:
+        if string[idx] != string[-idx - 1]:
             return False
     return True
 
