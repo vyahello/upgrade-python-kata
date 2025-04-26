@@ -19,6 +19,10 @@ python balances_parentheses.py
 from typing import List, Sequence, Dict
 
 
+BALANCED = "Balanced"
+UNBALANCED = f"Un{BALANCED.lower()}"
+
+
 def parentheses_status_stack(string: str) -> str:
     """Check is expression string has balanced parentheses (using stack method).
 
@@ -29,8 +33,8 @@ def parentheses_status_stack(string: str) -> str:
     If stack is empty at the end, return Balanced otherwise, Unbalanced.
 
     Examples:
-        >>> assert parentheses_status_stack("{[]{()}}") == "Balanced"
-        >>> assert parentheses_status_stack("[{}{})(]") == "Unbalanced"
+        >>> assert parentheses_status_stack("{[]{()}}") == BALANCED
+        >>> assert parentheses_status_stack("[{}{})(]") == UNBALANCED
     """
     # match indexes
     opened: Sequence[str] = tuple("[{(")
@@ -45,8 +49,8 @@ def parentheses_status_stack(string: str) -> str:
             if len(stack) and opened[position] == stack[len(stack) - 1]:
                 stack.pop()
     if not len(stack):
-        return "Balanced"
-    return "Unbalanced"
+        return BALANCED
+    return UNBALANCED
 
 
 def parentheses_status_queue(string: str) -> str:
@@ -58,8 +62,8 @@ def parentheses_status_queue(string: str) -> str:
     Check whether queue is empty or ‘i’ is the top element of queue, if yes, return “Unbalanced”, otherwise “Balanced”.
 
     Examples:
-        >>> assert parentheses_status_queue("{[]{()}}") == "Balanced"
-        >>> assert parentheses_status_queue("[{}{})(]") == "Unbalanced"
+        >>> assert parentheses_status_queue("{[]{()}}") == BALANCED
+        >>> assert parentheses_status_queue("[{}{})(]") == UNBALANCED
     """
     opened: Sequence[str] = tuple("({[")
     closed: Sequence[str] = tuple(")}]")
@@ -71,8 +75,8 @@ def parentheses_status_queue(string: str) -> str:
             queue.append(zipped[item])
         elif item in closed:
             if not queue or item != queue.pop():
-                return "Unbalanced"
-    return "Balanced"
+                return UNBALANCED
+    return BALANCED
 
 
 def parentheses_status_eliminate(string: str) -> str:
@@ -82,16 +86,16 @@ def parentheses_status_eliminate(string: str) -> str:
     If we end up with an empty string, our initial one was balanced; otherwise, not.
 
     Examples:
-        >>> assert parentheses_status_eliminate("{[]{()}}") == "Balanced"
-        >>> assert parentheses_status_eliminate("[{}{})(]") == "Unbalanced"
+        >>> assert parentheses_status_eliminate("{[]{()}}") == BALANCED
+        >>> assert parentheses_status_eliminate("[{}{})(]") == UNBALANCED
     """
     brackets: List[str] = ["()", "{}", "[]"]
     while any(item in string for item in brackets):
         for bracket in brackets:
             string = string.replace(bracket, "")
     if not string:
-        return "Balanced"
-    return "Unbalanced"
+        return BALANCED
+    return UNBALANCED
 
 
 def parentheses_status_eliminate_recursion(string: str) -> str:
@@ -101,17 +105,17 @@ def parentheses_status_eliminate_recursion(string: str) -> str:
     If we end up with an empty string, our initial one was balanced; otherwise, not.
 
     Examples:
-        >>> assert parentheses_status_eliminate_recursion("{[]{()}}") == "Balanced"
-        >>> assert parentheses_status_eliminate_recursion("[{}{})(]") == "Unbalanced"
+        >>> assert parentheses_status_eliminate_recursion("{[]{()}}") == BALANCED
+        >>> assert parentheses_status_eliminate_recursion("[{}{})(]") == UNBALANCED
     """
     brackets = '()', '[]', '{}'
     if any(br in string for br in brackets):
         for br in brackets:  # type: str
             string = string.replace(br, '')
         if not string:
-            return 'Balanced'
+            return BALANCED
         return parentheses_status_eliminate_recursion(string)
-    return 'Unbalanced'
+    return UNBALANCED
 
 
 if __name__ == "__main__":
