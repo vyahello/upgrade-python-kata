@@ -27,6 +27,7 @@ def is_int_array(array: List[Any]) -> bool:
         >>> assert not is_int_array(None)
         >>> assert not is_int_array("-1")
         >>> assert not is_int_array([1, 2, None])
+        >>> assert not is_int_array([1.0, 2.0, 3.0, 4.0001])
         >>> assert is_int_array([])
         >>> assert is_int_array([1, 2, 3, 4])
         >>> assert is_int_array([-11, -12, -13, -14])
@@ -37,9 +38,8 @@ def is_int_array(array: List[Any]) -> bool:
     for item in array:
         if not isinstance(item, (int, float)):
             return False
-        if isinstance(item, float):
-            if not item.is_integer():  # e.g 3.001 is decimal
-                return False
+        if isinstance(item, float) and not item.is_integer():  # e.g 3.001 is decimal
+            return False
     return True
 
 
